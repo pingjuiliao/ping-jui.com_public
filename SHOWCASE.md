@@ -30,8 +30,16 @@ Apparently, I have made some mistakes in developing the project. Now they are al
 My goal for this hosted websites is to gain experiences with modern techniques in Cloud Backend Development.
 I put notes like **what the challenges are** and **what could have been more effective**.
 
-### AWS Configuration
-We need to setup machine for deployment.
+### AWS Instance setup and management
+1. After launching the instance, it is NOT as simple as mapping the DNS to the public IP addresses. We need to define **Security Group** and define HTTP/HTTPS policies.
+2. SSH to the EC2 instance: after getting into the instance on your browser root, better to create another account for launching services.
+```
+# Do not use 'adduser' because 'useradd' setup many things for us.
+useradd -m new_user
+```
+3. Do not use the terminal in browser: issue like this is that `vim` cannot escape via `:` command.
+
+I plan to try more AWS features in the future. Hopefully, docker can make the deployment much easier
 
 ### Deploying with HTTPS
 Deploying with [TLS/SSL](https://en.wikipedia.org/wiki/Transport_Layer_Security) was challenging to me. I have read OpenSSL's document and learn what X509 certificates is and purchases with [Certificate Authority (CA)](https://en.wikipedia.org/wiki/Certificate_authority). This requires you to sign with your private key. OpenSSL has made things easier.  
