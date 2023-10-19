@@ -31,13 +31,15 @@ My goal for this hosted websites is to gain experiences with modern techniques i
 I put notes like **what the challenges are** and **what could have been more effective**.
 
 ### AWS Instance setup and management
-1. After launching the instance, it is NOT as simple as mapping the DNS to the public IP addresses. We need to define **Security Group** and define HTTP/HTTPS policies.
-2. SSH to the EC2 instance: after getting into the instance on your browser root, better to create another account for launching services.
+Some notes to help me setup things quickly in the future
+
+- After launching the instance, it is NOT as simple as mapping the DNS to the public IP addresses. We need to define **Security Group** and define HTTP/HTTPS policies.
+- SSH to the EC2 instance: after getting into the instance on your browser root, better to create another account for launching services.
 ```
 # Do not use 'adduser' because 'useradd' setup many things for us.
 useradd -m new_user
 ```
-3. Do not use the terminal in browser: issue like this is that `vim` cannot escape via `:` command.
+- Do not use the terminal in browser: issue like this is that `vim` cannot escape via `:` command.
 
 I plan to try more AWS features in the future. Hopefully, docker can make the deployment much easier
 
